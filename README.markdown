@@ -43,5 +43,5 @@ With a bit of care, you can use JournalTasks files directly in [TaskPaper](http:
 Screenshot
 ----------
 
-![](http://textbench.com/tools/JournalTasks-screenshot.jpg)
+![](http://www.schussman.com/images/135.jpg)
 
