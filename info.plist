@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>JournalTasks</string>
+	<key>ordering</key>
+	<array>
+		<string>4649B252-59CD-493B-99D0-0C01C0A59553</string>
+		<string>4709285F-02B4-41C4-AB2A-56A4819D0BEA</string>
+		<string>FA18B257-7C4E-460D-9185-C0B41BF4B571</string>
+		<string>87BF170B-EBF8-4098-B68A-3B3337A16E35</string>
+		<string>09552EB8-8586-46EE-83DE-1F3CB1CD3A9E</string>
+		<string>01C5A7FD-3363-4140-9E96-8C475FAD7E64</string>
+		<string>13A05E15-EB06-4592-ABF7-4784798BDE99</string>
+		<string>6FB98ABF-1641-4134-AC72-720C496C61F7</string>
+		<string>BA038009-5233-46E3-BF08-57419CFE9C89</string>
+		<string>21BBB852-1F38-4EF7-89EB-4BE7ECDCCD60</string>
+		<string>970556E8-F151-4304-9DC0-D5B9CCBDC100</string>
+		<string>5326248E-17D0-4384-AD7E-288C3BCC9356</string>
+		<string>15528BB1-A9C3-4D1D-8069-46F1FFBB5D41</string>
+		<string>8A32EF06-2216-4453-81A1-B88FAB8DCAEF</string>
+		<string>C63AB49E-046B-49A9-9EF7-EC3125286BB2</string>
+		<string>DFD4CBBB-4719-437D-962A-5D5E6727196B</string>
+		<string>880F4F9D-FEA0-422B-8186-6964B899B7CC</string>
+	</array>
+	<key>uuid</key>
+	<string>5FDBE1FF-1B3F-49BF-867D-AF41AC53F8EE</string>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>
+* [$1] $2 </string>
+	<key>keyEquivalent</key>
+	<string>#$</string>
+	<key>name</key>
+	<string>Add Unnumbered Todo Item</string>
+	<key>scope</key>
+	<string>text.html.journal</string>
+	<key>tabTrigger</key>
+	<string></string>
+	<key>uuid</key>
+	<string>970556E8-F151-4304-9DC0-D5B9CCBDC100</string>
+</dict>
+</plist>

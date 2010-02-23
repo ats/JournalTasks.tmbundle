@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>
+`perl &lt;&lt;&lt;$TM_CURRENT_LINE -pe 's/.*?(\d+).*/$1+1/e'`. </string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Add Numbered List Item</string>
+	<key>scope</key>
+	<string>text.html.journal </string>
+	<key>uuid</key>
+	<string>6FB98ABF-1641-4134-AC72-720C496C61F7</string>
+</dict>
+</plist>

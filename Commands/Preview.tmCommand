@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>. "$TM_SUPPORT_PATH/lib/html.sh"
+
+if [[ -z $TM_FILENAME ]]
+  then title="Markdown as HTML"
+  else title="${TM_FILENAME%.*}"
+fi
+
+htmlHeader "$title" '&lt;style type="text/css"&gt;
+  body {  
+    background-color: #eee;
+  }
+  pre {
+    background: #999;
+    color: #fff;
+    border: 1px solid #666;
+    margin: 5px 10px;
+    padding: 3px;
+    width: 90%;
+    overflow: scroll;
+  }
+  code {
+    font-family: "Courier New";
+    font-size: 12px;
+  }
+  .contents {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5em;
+    font-size: 12px;
+    padding: 0 1em;
+  }
+  .tag {
+     background: #999;
+	color: #fff;
+	font-family: "Courier New";
+     font-size: 13px
+     font-weight: bold;
+	padding: 3px;
+  }
+  div.entry {
+     background: #fff; 
+     border: 1px solid #577DB9;
+     padding: 5px;
+     margin: 10px 0px 10px 0px;
+  }
+  div.entry h1 {
+     background: #577DB9;
+     color: #fff;
+     margin: -5px;
+     padding: 3px;
+     font-family: Arial;
+     font-weight: normal;
+     letter-spacing: 0.3em;
+	font-size: 1.3em;
+  }
+  &lt;/style&gt;'
+
+if [[ -f "$TM_FILEPATH" ]]; then
+  echo "&lt;base href='tm-file://${TM_FILEPATH// /%20}'&gt;"
+fi
+
+beginTag div 'contents'
+
+# pretty up the format of the HTML output
+"$TM_SUPPORT_PATH/bin/Markdown.pl" | ${TM_RUBY:-ruby} "${TM_BUNDLE_SUPPORT}/format_journal.rb"
+
+endTag
+htmlFooter
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^~@p</string>
+	<key>name</key>
+	<string>Preview</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.html.journal</string>
+	<key>uuid</key>
+	<string>4649B252-59CD-493B-99D0-0C01C0A59553</string>
+</dict>
+</plist>
