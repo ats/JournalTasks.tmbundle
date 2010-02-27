@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+def url_esc (url)
+	url.gsub(/[^a-zA-Z0-9.-\/]/) { |m| sprintf("%%%02X", m[0]) }
+end
+
+def html_esc (text)
+	text.gsub(/&lt;/, '&amp;lt;').gsub(/&amp;/, '&amp;amp;')
+end
+#/Applications/TextMate.app/Contents/SharedSupport/Support/
+output = `"$TM_SUPPORT_PATH/bin/CocoaDialog.app/Contents/MacOS/CocoaDialog" inputbox --title Input --informative-text 'Search For @tasks...' --button1 'Search' --button2 'Abort'`
+output = output.split("\n")
+
+# check the button pressed, exit if it wasn't Record
+if(output[0] !~ /^1$/)
+	exit
+end
+
+regex = Regexp.new(output[1].strip, true)
+
+print "&lt;h1&gt;@#{output[1].strip} matches&lt;/h1&gt;";
+
+no = 0
+ma = 0
+lines = $stdin.readlines
+lines.each do |line|
+	no += 1
+	if regex.match line
+       if /@\w+/ =~ line
+         ma += 1
+		print "&lt;a href=\"txmt://open?url=file://#{url_esc ENV['TM_FILEPATH']}"
+		print "&amp;line=#{no}"
+		print "\"&gt;#{html_esc line}&lt;/a&gt;&lt;br&gt;"
+        end
+	end	
+end
+        if ma == 1
+            print "&lt;br&gt;&lt;b&gt;#{ma} match&lt;/b&gt;"
+        else
+            print "&lt;br&gt;&lt;b&gt;#{ma} matches&lt;/b&gt;"
+        end	</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@@</string>
+	<key>name</key>
+	<string>Find @ Tasks</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.html.journal</string>
+	<key>uuid</key>
+	<string>D74BA597-3669-4CDB-99D0-7B9723B58903</string>
+</dict>
+</plist>

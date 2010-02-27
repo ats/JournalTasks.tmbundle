@@ -33,7 +33,11 @@ Tasks:
 
 Find:
 
-Use the _find in journal_ command to search for keywords. It will produce a list of matches, with links to the entry and a brief excerpt. This is particularly useful when keeping a long journal file such as a snippets log.
+There are two ways to find content in your JournalTasks files:
+
+1. Use the _find in journal_ command to search for keywords. It will produce a list of matches, with links to the entry and a brief excerpt. This is particularly useful when keeping a long journal file such as a snippets log.
+
+2. TaskPaper uses @context tags at the end of a task line; you can use those with JournalTasks, as well, as in "- do something @work" and then use the _find @ commands_ command to produce a list only of matching labeled tasks from across all your entries.
 
 Interoperability
 ----------------
