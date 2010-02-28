@@ -49,7 +49,7 @@ end
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
-	<string>^F</string>
+	<string>@F</string>
 	<key>name</key>
 	<string>Find in journal</string>
 	<key>output</key>
