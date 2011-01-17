@@ -29,6 +29,7 @@ Tab through the snippet presented by each trigger to enter title, keywords (comm
   * use _enter_ to add new item to existing list
 * freely indent tasks to make sub-tasks/projects
 * toggle tasks to complete with cmd-D
+* mark tasks complete with a datestamp, with cmd-shift-D
 * purge completed tasks with cmd-E
 
 ### Find:
